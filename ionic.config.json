@@ -1,0 +1,7 @@
+{
+  "name": "augmentend-reality",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
