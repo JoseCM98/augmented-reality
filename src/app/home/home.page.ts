@@ -1,5 +1,7 @@
+import { findLast } from '@angular/compiler/src/directive_resolver';
 import { Component } from '@angular/core';
 
+import { FilesystemService } from '../services/filesystem.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(public filasistem: FilesystemService) {}
 
+  guardar(){
+    this.filasistem.writeSecretFile();
+  }
+  leer(){
+    this.filasistem.readSecretFile();
+  }
+  eliminar(){
+    this.filasistem.cdeleteSecretFile();
+  }
 }
